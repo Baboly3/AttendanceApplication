@@ -19,7 +19,7 @@ import javax.persistence.ManyToOne;
  * @author Swartt
  */
 @Entity
-class Day implements Serializable {
+public class Day implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

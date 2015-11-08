@@ -16,23 +16,21 @@ import javax.ejb.Local;
 public class MainFacade {
    
     @EJB
-    AttendanceFacade attendanceFacade;
+    AttendanceFacade attendanceService;
     @EJB
-    CourseFacade courseFacade;
+    CourseFacade courseService;
     @EJB
-    UserFacade userFacade;
+    UserFacade userService;
 
-    public AttendanceFacade getAttendanceFacade() {
-        return attendanceFacade;
+    public AttendanceFacade getAttendanceService() {
+        return attendanceService;
     }
 
-    public CourseFacade getCourseFacade() {
-        return courseFacade;
+    public CourseFacade getCourseService() {
+        return courseService;
     }
 
-    public UserFacade getUserFacade() {
-        return userFacade;
-    }
-    
-    
+    public UserFacade getUserService() {
+        return userService;
+    }   
 }
