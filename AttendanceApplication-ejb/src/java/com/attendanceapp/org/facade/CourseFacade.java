@@ -6,6 +6,8 @@
 package com.attendanceapp.org.facade;
 
 import com.attendanceapp.org.crud.GenericCRUD;
+import com.attendenceapp.org.entities.Course;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -18,6 +20,10 @@ public class CourseFacade extends GenericCRUD<Course> {
 
     @PersistenceContext(unitName = "MusicExplorerPU")
     private EntityManager em;
+
+    public CourseFacade() {
+        super(Course.class);
+    }
 
     @Override
     protected EntityManager getEntityManager() {

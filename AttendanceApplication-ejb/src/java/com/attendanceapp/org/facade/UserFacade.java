@@ -6,9 +6,11 @@
 package com.attendanceapp.org.facade;
 
 import com.attendanceapp.org.crud.GenericCRUD;
+import com.attendenceapp.org.entities.User;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.xml.registry.infomodel.User;
+
 
 /**
  *
@@ -19,6 +21,10 @@ public class UserFacade extends GenericCRUD<User> {
 
     @PersistenceContext(unitName = "MusicExplorerPU")
     private EntityManager em;
+
+    public UserFacade() {
+        super(User.class);
+    }
 
     @Override
     protected EntityManager getEntityManager() {
